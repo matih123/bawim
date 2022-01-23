@@ -10,11 +10,11 @@ curl -i -X POST -d key=Re2LPGUMEKa34ik1uhHOBMoc https://bawim.tk/get_app_version
 1. Znajdź ID konta 'admin', a następnie klucz przypisany do konta.
 2. Przy użyciu znalezionego klucza wypisz szczegółowe informacje o koncie 'admin'.
 3. Zresetuj hasło admina, znając kod funkcji weryfikującej token.  
-![alt text](https://github.com/matih123/bawim/blob/main/verify.png)  
+![alt text](https://github.com/matih123/bawim/blob/master/verify.png)  
 4. Zaloguj się na konto admina (podaj id sesji).  
 5. Znajdź użytkownika, który ma na koncie $1.000.000.  
 podpowiedź: napisz prosty skrypt np. w pythonie (moduł requests).  
-![alt text](https://github.com/matih123/bawim/blob/main/requests.png)  
+![alt text](https://github.com/matih123/bawim/blob/master/requests.png)  
 6. Ustaw typ konta na premium dowolnemu użytkownikowi.  
 podpowiedź: https://youtu.be/MpeaSNERwQA.
 
