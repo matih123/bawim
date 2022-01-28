@@ -1,4 +1,4 @@
-# bawim
+# Projekt bezpieczeństwo aplikacji webowych i mobilnych
 ## Analiza oraz wykorzystanie podatności w zapytaniach HTTP pomiędzy aplikacją mobilną i API
 Instalacja nie jest wymagana, API znajduje się pod adresem https://bawim.tk.  
 Do wysyłania zapytań najlepiej użyć narzędzia curl lub serwisu https://postman.co.
